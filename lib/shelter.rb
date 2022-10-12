@@ -1,11 +1,25 @@
 class Shelter
 
-  attr_reader :name, :capacity
+  attr_reader :name, :capacity, :pets
 
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
-    @pets = 0
+    @pets = []
+  end
+
+  def add_pet(pet)
+    @pets.push(pet)
+  end
+
+  def call_pets()
+    pet_calls = []
+
+    @pets.each do |pet|
+      pet_calls.push(pet + "!")
+    end
+
+    return pet_calls
   end
 
 
