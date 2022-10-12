@@ -22,6 +22,14 @@ class Shelter
     return pet_calls
   end
 
+  def over_capacity?
+    if (@pets.length > @capacity)
+      return true
+    end
+
+    return false
+  end
+
 
 
 end
