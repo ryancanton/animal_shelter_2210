@@ -22,7 +22,7 @@ class Shelter
     return pet_calls
   end
 
-  def over_capacity?
+  def over_capacity?()
     if (@pets.length > @capacity)
       return true
     end
@@ -30,6 +30,11 @@ class Shelter
     return false
   end
 
+  def adopt()
+    if (@pets != [])
+      pets.pop
+    end
+  end
 
 
 end
